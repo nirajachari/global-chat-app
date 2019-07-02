@@ -1,0 +1,120 @@
+.self {
+  float: right;
+}
+
+.others {
+  float:left;
+}
+
+.container-div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 600px auto;
+  grid-gap: 3px;
+  grid-template-areas:
+    ". . a a . ."
+    ". . b b . .";
+  background-color: #171453;
+  padding: 10px;
+}
+
+.container-chat {
+  grid-area: a;
+  max-height: 600px;
+  background-color: #5B57B1;
+  overflow-y: scroll;
+  word-wrap: normal;
+}
+
+.container-input {
+  grid-area: b;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.container {
+  max-width: 400px;
+  width: max-content;
+  float: right;
+  clear: right;
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  float: left;
+  clear: left;
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.container p.right {
+  width: max-context;
+  max-width: 300px;
+  word-wrap: normal;
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  clear: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+@media screen and (max-width: 1400px) {
+  .container-div {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      ". a a a ."
+      ". b b b .";
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container-div {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      ". a a a a ."
+      ". b b b b .";
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container-div {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a a a a"
+      "b b b b";
+  }
+}
