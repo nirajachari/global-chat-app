@@ -19,6 +19,8 @@ function send() {
                                                   '<img src="avatars/david.png" alt="Avatar" style="width:100%;">'+
                                                   '<p class="right">'+document.getElementById('text').value.trim()+'</p>'+
                                                   '<span class="time-right">'+time+'</span>'+'</div><br/>';
+  var messageBody = document.querySelector('#chat');
+  messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
   var data = {};
   data.text = document.getElementById('text').value.trim();
   document.getElementById('text').value = '';
@@ -33,4 +35,6 @@ function receive(data) {
                                                   '<img src="avatars/mike.png" alt="Avatar" style="width:100%;">'+
                                                   '<p class="right">'+data.text+'</p>'+
                                                   '<span class="time-right">'+time+'</span>'+'</div><br/>';
+  var messageBody = document.querySelector('#chat');
+  messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
 }

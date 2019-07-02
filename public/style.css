@@ -37,7 +37,7 @@
   max-width: 400px;
   width: max-content;
   float: right;
-  clear: right;
+  clear: both;
   border: 2px solid #dedede;
   background-color: #f1f1f1;
   border-radius: 5px;
@@ -47,7 +47,7 @@
 
 .darker {
   float: left;
-  clear: left;
+  clear: both;
   border-color: #ccc;
   background-color: #ddd;
 }
@@ -77,6 +77,7 @@
   max-width: 300px;
   word-wrap: normal;
   float: right;
+  clear: right;
   margin-left: 20px;
   margin-right:0;
 }
